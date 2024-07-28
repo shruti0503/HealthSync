@@ -1,3 +1,5 @@
+
+'use server'
 import { users } from "../appwrite.config";
 import { ID, Query } from "node-appwrite";
 import { BUCKET_ID, DATABASE_ID, ENDPOINT, PATIENT_COLLECTION_ID, PROJECT_ID, databases, storage } from "../appwrite.config";
@@ -49,12 +51,25 @@ export const registerPatient = async ({
         if (identificationDocument) {
             console.log("Identification Document:", identificationDocument);
 
-            const inputFile =
-                identificationDocument &&
-                InputFile?.fromBuffer(
-                    identificationDocument.get("blobFile") as Blob,
-                    identificationDocument.get("fileName") as string
-                );
+            const blobFile = identificationDocument.get("blobFile") as Blob;
+            const fileName = identificationDocument.get("fileName") as string;
+
+            // Check the Blob file size
+            if (blobFile.size === 0) {
+                throw new Error("Blob file is empty");
+            }
+
+            // Convert Blob to ArrayBuffer
+            const buffer = await blobFile.arrayBuffer();
+
+            // Log buffer length
+            console.log("Buffer length:", buffer.byteLength);
+
+            if (buffer.byteLength === 0) {
+                throw new Error("Buffer is empty");
+            }
+
+            const inputFile = InputFile.fromBuffer(buffer, fileName);
 
             console.log("Input File:", inputFile);
 
@@ -66,14 +81,16 @@ export const registerPatient = async ({
             console.log("Uploaded file:", file);
         }
 
+        console.log("PATIENT_COLLECTION_ID", process.env.PATIENT_COLLECTION_ID)
+
         const newPatient = await databases.createDocument(
             DATABASE_ID!,
-            PATIENT_COLLECTION_ID!,
+            process.env.PATIENT_COLLECTION_ID!,
             ID.unique(),
             {
                 identificationDocumentId: file?.$id ? file.$id : null,
                 identificationDocumentUrl: file?.$id
-                    ? `${ENDPOINT}/storage/buckets/${BUCKET_ID}/files/${file.$id}/view??project=${PROJECT_ID}`
+                    ? `${ENDPOINT}/storage/buckets/${BUCKET_ID}/files/${file.$id}/view?project=${PROJECT_ID}`
                     : null,
                 ...patient,
             }
