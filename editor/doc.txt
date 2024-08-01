@@ -22,3 +22,47 @@ import { Schedule } from "@mui/icons-material"
 
 // appointment form validation
 //in appointment form -> set the defauoltb values 
+
+//--> ap[poinment ] CallToActionSharp.tsx
+// all the collection ids
+
+// go to validation -> getAppointmrnt 
+
+---
+sucess page 
+ user id new app -> success page.tscx
+
+ -- fetch informatioon of pointment  to be able to show them
+
+ go to actions apoointmentactions export const getAppointment
+
+ // /new-appointment/success?appointmentId=123&a 
+ query paramters 
+
+ what does asChild Mean
+
+ ---
+ otp verificatyion-> admin
+
+ go to home page click on admin -> admin-> tru in serach paramters
+ checlk if user wants to admin
+  then show passkey model
+
+  if isAdmin then render PassKeyMode;
+  im  compoennts -> passeky miodel
+
+  shadcn alert dialog
+  AlertDialogHeader
+
+
+  shadcn input otp
+
+
+  ----impolimatent validate passkey function 
+
+  prevent default begavout 
+  
+
+
+
+
