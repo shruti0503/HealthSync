@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import * as Sentry from '@sentry/nextjs'
 import { Button } from "@/components/ui/button";
 import { Doctors } from "@/constants";
 import { getAppointment } from "@/lib/actions/appointment.actions";
 import { formatDateTime } from "@/lib/utils";
+import { getUser } from "@/lib/actions/patient.actions";
 
 const RequestSuccess = async ({
   searchParams,
@@ -13,6 +14,8 @@ const RequestSuccess = async ({
   const appointmentId = (searchParams?.appointmentId as string) || "";
   const appointment = await getAppointment(appointmentId);
   console.log("Appis", appointment)
+  const user=await getUser(userId)
+  Sentry.metrics.set("user_success_appointment",user.name)
 
 
 
@@ -24,15 +27,21 @@ const RequestSuccess = async ({
   return (
     <div className=" flex h-screen max-h-screen px-[5%]">
       <div className="success-img">
-        <Link href="/">
-          <Image
-            src="/assets/icons/logo-full.svg"
-            height={1000}
-            width={1000}
-            alt="logo"
-            className="h-10 w-fit"
-          />
-        </Link>
+        <Link href="/" className="cursor-pointer">
+            <div className="flex  items-center mb-5 ms-[-19px]">
+              <Image
+                  src="/assets/icons/logoFull.png"
+                  height={100}
+                // rem={true}
+                  width={162}
+                  alt="logo"
+                  className="h-12 w-fit"
+                />
+              <p className="font-bold text-3xl mb-2">HealthSync</p>
+
+            </div>
+        
+          </Link>
 
         <section className="flex flex-col items-center">
           <Image
@@ -79,7 +88,7 @@ const RequestSuccess = async ({
           </Link>
         </Button>
 
-        <p className="copyright">© 2024 CarePluse</p>
+        <p className="copyright">© 2024 HealthSync</p>
       </div>
     </div>
   );

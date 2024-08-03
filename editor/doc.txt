@@ -64,5 +64,71 @@ sucess page
   
 
 
+  -----
+  admin dashboard
 
+  Stat Card--> taht represnts data from backend 
+
+  components-> StatCard
+   props to pass _> type : oending , count , label ,icons
+   StatCard
+   {}
+    optoiosn object  in clsx
+clsx('stat-card',{
+   'bg
+})
+
+-> appointments.actions.tsxexport const getRecentAppointments
+
+try{
+    const appointment=await databses.listDocuments(
+
+    )
+
+}
+catch(errpr){
+
+}
+
+
+compoents-> DataTable table folder -> columns, 
+components0>status batch
+-->Reduce : 
+
+
+ColumnDef type from the TanStack Table library, which is commonly used for building tables in React applications, including those built with Next.js.
+TanStack Table:
+This is a popular, headless UI library for React that allows you to create highly customizable tables.
+ColumnDef:
+This is a TypeScript type within TanStack Table that defines the structure of a column in your table. It includes properties like header, accessorKey, and cell that control how the column is displayed and what data it shows.
+generic function component in React using TypeScript.
+
+interface Column<TData, TValue> {
+  header: string;
+  accessor: (data: TData) => TValue;
+}
+
+interface DataTableProps<TData, TValue> {
+  columns: Column<TData, TValue>[];
+  data: TData[];
+}
+
+
+genrixcs in typescript ***
+
+--
+
+shad cn dial;og 
+in AppointmenModel in componenys
+
+asChild-> button acts as trigger
+
+
+chnages in appointment form acording to the details
+updateAppointment
+what is revalidate  Path
+
+
+--
+sentry , monitor bugs , sms notifications
 

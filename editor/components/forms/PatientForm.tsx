@@ -31,7 +31,7 @@ import SubmitButton from "../ui/submitButton";
 
   const onSubmit = async (values: z.infer<typeof UserFormValidation>) => {
     setIsLoading(true);
-    console
+    console.log("onsubmit called")
 
     try {
       const user = {
@@ -65,7 +65,7 @@ import SubmitButton from "../ui/submitButton";
           control={form.control}
           name="name"
           label="Full name"
-          placeholder="John Doe"
+          placeholder="Hazel Grace"
           iconSrc="/assets/icons/user.svg"
           iconAlt="user"
         />
@@ -75,7 +75,7 @@ import SubmitButton from "../ui/submitButton";
           control={form.control}
           name="email"
           label="Email"
-          placeholder="johndoe@gmail.com"
+          placeholder="Hazel90@gmail.com"
           iconSrc="/assets/icons/email.svg"
           iconAlt="email"
         />
