@@ -9,6 +9,8 @@ Welcome to **HealthSync** – your one-stop solution for healthcare booking and 
 ## Technologies Used 💻
 
 - **Next.js**: For building the front-end of the application.
+- **Tailwind CSS**: For styling.
+- **ShadCn UI** : For accessible and customizable components.
 - **Appwrite**: For backend services and database management.
 - **Sentry**: For error tracking and performance monitoring.
 - **Twilio**: For SMS notifications.
@@ -17,6 +19,7 @@ Welcome to **HealthSync** – your one-stop solution for healthcare booking and 
 
 - **Patient Registration**: Easily register and get started.
 - **Appointment Booking**: Schedule new appointments, choose doctors, and provide patient history details.
+- **Form Validation**: Validate forms before submitting.
 - **Admin Dashboard**: Securely access and manage all appointments, including scheduled, pending, and canceled bookings.
 - **Notifications**: Stay updated with appointment confirmations and reminders.
 
@@ -31,6 +34,8 @@ Welcome to **HealthSync** – your one-stop solution for healthcare booking and 
 2. **Patient Details**:
    - After registration, you are redirected here to fill in the necessary details, including patient history.
      <img width="1433" alt="Screenshot 2024-08-04 at 1 42 01 AM" src="https://github.com/user-attachments/assets/241a37e6-0289-4ccc-ab4c-5a545da8c8c6">
+     **Form Validation**
+     <img width="596" alt="Screenshot 2024-08-04 at 1 42 39 AM" src="https://github.com/user-attachments/assets/d901db18-81f5-4bdd-a84c-47d541854feb">
 
 3. * New Appointment **:
    - Choose your preferred doctor and finalize the appointment details.
