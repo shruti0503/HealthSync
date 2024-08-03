@@ -34,7 +34,9 @@ Welcome to **HealthSync** – your one-stop solution for healthcare booking and 
 2. **Patient Details**:
    - After registration, you are redirected here to fill in the necessary details, including patient history.
      <img width="1433" alt="Screenshot 2024-08-04 at 1 42 01 AM" src="https://github.com/user-attachments/assets/241a37e6-0289-4ccc-ab4c-5a545da8c8c6">
+     
    - **Form Validation**
+     
      <img width="596" alt="Screenshot 2024-08-04 at 1 42 39 AM" src="https://github.com/user-attachments/assets/d901db18-81f5-4bdd-a84c-47d541854feb">
 
 3. * New Appointment **:
