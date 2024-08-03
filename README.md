@@ -62,6 +62,4 @@ https://github.com/user-attachments/assets/467a857a-18de-4ce0-9ab6-e11311d44ada
    - Manage appointments with options to schedule, reappoint, update, or cancel meetings.
 
 
-## Conclusion 🎉
 
-Thank you for using HealthSync! We hope our application helps you efficiently manage your healthcare appointments. For any issues or suggestions, please feel free to reach out to our support team.
