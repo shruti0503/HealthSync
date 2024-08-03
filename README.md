@@ -2,9 +2,9 @@
 
 # HealthSync 📅✨ 
 Deployed Link:  https://health-sync-kappa.vercel.app/admin
+!!! Admin PassKey 050994 -> to access dashboard  !!!
 
-Welcome to **HealthSync** – your one-stop solution for healthcare booking and management. This application is designed to streamline the process of scheduling, managing, and tracking healthcare appointments, ensuring a seamless experience for both patients and administrators.
-Admin PassKey 050994 -> to access dashboard
+Welcome to **HealthSync** – your one-stop solution for healthcare booking and management. This application is designed to streamline the process of scheduling, managing, and tracking healthcare appointments, ensuring a seamless experience for both patients and administrators. 
 <img width="500" alt="Screenshot 2024-08-04 at 1 12 51 AM" src="https://github.com/user-attachments/assets/77743c60-c72a-4262-89aa-e305814d2bab">
 
 ## Technologies Used 💻
