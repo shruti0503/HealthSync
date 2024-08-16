@@ -2,6 +2,7 @@
 
 # HealthSync 📅✨ 
 Deployed Link:   https://health-sync-kappa.vercel.app/
+
 https://health-sync-kappa.vercel.app/admin
 !!! Admin PassKey 050994 -> to access dashboard [watch video below]  !!! 
 
