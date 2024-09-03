@@ -41,20 +41,20 @@ export const getAppointment = async (appointmentId: string) => {
     }
   };
 
-  export const sendSMSNotification = async (userId: string, content: string) => {
-    try {
-      // https://appwrite.io/docs/references/1.5.x/server-nodejs/messaging#createSms
-      const message = await messaging.createSms(
-        ID.unique(),
-        content,
-        [],
-        [userId]
-      );
-      return parseStringify(message);
-    } catch (error) {
-      console.error("An error occurred while sending sms:", error);
-    }
-  };
+export const sendSMSNotification = async (userId: string, content: string) => {
+  try {
+    // https://appwrite.io/docs/references/1.5.x/server-nodejs/messaging#createSms
+    const message = await messaging.createSms(
+      ID.unique(),
+      content,
+      [],
+      [userId]
+    );
+    return parseStringify(message);
+  } catch (error) {
+    console.error("An error occurred while sending sms:", error);
+  }
+};
 
 export const updateAppointment=async({  appointmentId,
     userId,
